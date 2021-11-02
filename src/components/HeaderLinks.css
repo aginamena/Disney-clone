@@ -1,0 +1,16 @@
+#headerLinks {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#headerLinks > img {
+  height: 30px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+#headerLinks > a {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.42px;
+}

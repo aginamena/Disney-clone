@@ -1,0 +1,26 @@
+#header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+#firstChild {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#firstChild > span {
+  display: flex;
+}
+#header-logo {
+  width: 100px;
+  object-fit: cover;
+}
+#header #profile > img {
+  height: 50px;
+  border-radius: 50px;
+  margin-left: 10px;
+  object-fit: cover;
+}
