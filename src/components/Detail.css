@@ -4,5 +4,14 @@
   background-repeat: no-repeat;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.5;
+}
+#detail .imageTitle {
+  font-family: "Fruktur", "cursive";
+  font-size: 70px;
+  color: white;
+  padding-top: 50px;
+}
+.producers,
+#detail .description {
+  color: white;
 }

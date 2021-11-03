@@ -8,8 +8,12 @@ function Movies(props) {
             <h4>{props.heading}</h4>
             <div>
                 {
-                    props.movies.map((movie, index) => (
-                        <Link to="/detail"><img src={movie} key={index} /></Link>
+                    props.movies.map((movie) => (
+                        movie &&
+                        <Link to={"/detail/" + movie.id}>
+                            {/* if there is a move, we diplay the card image */}
+                            {<img src={movie.cardImg} key={movie.id} id={movie.id} />}
+                        </Link>
                     ))
                 }
             </div>

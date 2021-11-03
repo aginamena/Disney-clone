@@ -23,13 +23,12 @@ function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/detail">
+          <Route exact path="/detail/:identifier">
             <Detail
-              src="https://m.media-amazon.com/images/M/MV5BMjYxYmRlZWYtMzAwNC00MDA1LWJjNTItOTBjMzlhNGMzYzk3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
             />
           </Route>
         </Switch>
-        <p>Created by Mena Agina </p>
+        <p id="author">Created by Mena Agina </p>
       </div>
     </Router>
   );
