@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  padding-top: 9px;
+  padding-bottom: 15px;
 }
 #firstChild {
   width: 70%;
@@ -18,9 +20,40 @@
   width: 100px;
   object-fit: cover;
 }
-#header #profile > img {
+
+#header #profile > div {
+  display: flex;
+  align-items: center;
+}
+
+#header #profile img {
   height: 50px;
   border-radius: 50px;
   margin-left: 10px;
   object-fit: cover;
+  margin-right: 15px;
+}
+#profile button {
+  border: 1px solid #f9f9f9;
+  padding: 8px 16px;
+  border-radius: 4px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease 0s;
+  color: white;
+}
+
+#profile button:hover {
+  background-color: #f9f9f9;
+  color: black;
+  border-color: transparent;
+}
+#profile span {
+  display: flex;
+  flex-direction: column;
+}
+#profile small {
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }

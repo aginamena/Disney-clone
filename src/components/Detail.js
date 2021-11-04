@@ -29,26 +29,24 @@ function Detail(props) {
 
         <div id="detail" style={movie ? { backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + movie.backgroundImg + ")" } : {}}>
             <div className="container">
-                <img src="./images/play-icon-black.png" alt="play button" />
+
                 {
                     movie && (
                         <>
-                            <p className="imageTitle">KING KONG</p>
-                            <div>
-                                <div>
-                                    <img src="./images/play-icon-black.png" alt="play button" />
+                            <h1 className="imageTitle">{movie.titleImg}</h1>
+                            <div id="btn-playList">
+                                <button id="play-btn">
+                                    <i class="fas fa-play" />
                                     <small>Play</small>
-                                </div>
-                                <button>
-                                    {/* <img src="./images/play-icon-white.png" alt="trailer button" /> */}
+                                </button>
+                                <button id="play-btn2">
+                                    <i class="fas fa-play" />
                                     <small>Trailer</small>
                                 </button>
-                                <div>
-                                    <img src="./images/group-icon.png" alt="group icon" />
-                                </div>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-users"></i>
                             </div>
-                            <p className="producers">{movie.producers}</p>
-                            <p className="description">{movie.description}</p>
+                            <p className="producers">By {movie.producers}</p>
                         </>
                     )
                 }

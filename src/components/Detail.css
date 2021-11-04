@@ -1,9 +1,10 @@
 #detail {
-  /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   object-fit: cover;
+  display: flex;
+  align-items: center;
 }
 #detail .imageTitle {
   font-family: "Fruktur", "cursive";
@@ -11,7 +12,60 @@
   color: white;
   padding-top: 50px;
 }
-.producers,
-#detail .description {
+.producers {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.5px;
   color: white;
+}
+
+#play-btn2 i,
+#play-btn2 small {
+  color: white;
+}
+#play-btn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+}
+#play-btn {
+  background-color: rgb(249, 249, 249);
+}
+#play-btn:hover {
+  background-color: rgb(198, 198, 198);
+}
+
+.container > div > #play-btn,
+#play-btn2 {
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 30px;
+}
+#detail button > small {
+  font-weight: bold;
+  margin-left: 5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+#btn-playList {
+  display: flex;
+  align-items: center;
+  margin: 16px auto;
+}
+
+#btn-playList .fa-plus,
+.fa-users {
+  font-size: 20px;
+  border-radius: 50px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0, 6);
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-right: 30px;
+}
+.fa-users {
+  margin-right: 0;
+  background-color: black;
 }
