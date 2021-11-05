@@ -25,7 +25,7 @@ function Header() {
                     photo: user.photoURL
                 }))
                 // go the home page
-                history.push("/");
+                history.push("/home");
             }
         })
     }, [])
@@ -41,7 +41,7 @@ function Header() {
                     photo: user.photoURL
                 }))
                 // go the home page
-                history.push("/");
+                history.push("/home");
             })
             .catch((err) => {
                 alert("AN ERROR OCCURED!")
