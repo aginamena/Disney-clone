@@ -53,7 +53,7 @@ function Header() {
                 // the user signs out, we redirect back to the login page
                 dispatch(setSignOut());
                 //go to log out page
-                history.push("/login");
+                history.push("/");
             })
             .catch(() => alert("ERROR SIGNING OUT!"))
     }
