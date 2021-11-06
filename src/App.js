@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Detail from "./components/Detail"
 import Login from './components/Login';
+import test from './components/test';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +16,8 @@ function App() {
   return (
     <Router>
       <div className="App" style={{ backgroundImage: "url(./images/home-background.png)" }}>
-        <Header />
+        {/* <Header /> */}
+        <test />
         <Switch>
           <Route exact path="/">
             <Login />

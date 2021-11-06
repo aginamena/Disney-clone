@@ -57,3 +57,6 @@
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+.navbar-toggler-icon {
+  color: white;
+}

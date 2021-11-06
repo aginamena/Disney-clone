@@ -54,44 +54,45 @@ function Header() {
     }
 
     return (
-        <div id="header" className="container-fluid">
-            <span id="firstChild">
-                <img src="./images/logo.svg" alt="desney logo" id="header-logo" />
+        <nav id="header" className="container-fluid navbar navbar-expand-lg">
+            <img src="./images/logo.svg" alt="desney logo" id="header-logo" className="navbar-brand" />
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                {/* <span className="navbar-toggler-icon"></span> */}
+                <i className="fas fa-bars navbar-toggler-icon"></i>
+            </button>
 
-                <span>
 
-                    {
-                        // if the username isn't null, we want to share these links
-                        userName && (
-                            <>
-                                <HeaderLinks src="./images/home-icon.svg" name="home" />
-                                <HeaderLinks src="./images/search-icon.svg" name="search" />
-                                <HeaderLinks src="./images/watchlist-icon.svg" name="watchlist" />
-                                <HeaderLinks src="./images/original-icon.svg" name="original" />
-                                <HeaderLinks src="./images/movie-icon.svg" name="movies" />
-                                <HeaderLinks src="./images/series-icon.svg" name="series" />
-                            </>
-                        )
-                    }
-                </span>
-            </span>
-            <span id="profile">
+            <div className="collapse navbar-collapse" id="navbarNav">
                 {
-                    // if the user isn't loged in, we want to show the login button
-                    // otherwise, show the user's profile image
-                    !userName ? <button onClick={signIn}>Login</button> :
-                        <div>
-                            {/* <span>Profile</span> */}
-                            <img src={userPhoto} alt="user profile" />
-                            <span>
-                                <small>{userName}</small>
+                    // if the username isn't null, we want to share these links
+                    userName ? (
+                        <>
+                            <ul className="navbar-nav">
+                                <div>
+                                    <HeaderLinks src="./images/home-icon.svg" name="home" />
+                                    <HeaderLinks src="./images/search-icon.svg" name="search" />
+                                    <HeaderLinks src="./images/watchlist-icon.svg" name="watchlist" />
+                                    <HeaderLinks src="./images/original-icon.svg" name="original" />
+                                    <HeaderLinks src="./images/movie-icon.svg" name="movies" />
+                                    <HeaderLinks src="./images/series-icon.svg" name="series" />
+                                </div>
+                                <div>
+                                    <img src={userPhoto} alt="user profile" />
+                                    <span>
+                                        <small>{userName}</small>
 
-                                <button onClick={signOut}>Log Out</button>
-                            </span>
-                        </div>
+                                        <button onClick={signOut}>Log Out</button>
+                                    </span>
+                                </div>
+                            </ul>
+
+                        </>
+                    )
+                        : <button onClick={signIn}>Login</button>
                 }
-            </span>
-        </div>
+
+            </div>
+        </nav>
     )
 }
 
