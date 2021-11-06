@@ -2,8 +2,18 @@
   display: flex;
   justify-content: space-between;
 }
-#viewers > img {
+/* #video1 {
   height: 100px;
+  width: 100px;
+} */
+#viewers div {
+  width: 174px;
+  height: 100px;
+  cursor: pointer;
+}
+#viewers > div img {
+  height: 100px;
+  /* width: 100%; */
   border: 3px solid rgba(249, 249, 249, 0.1);
   border-radius: 10px;
   object-fit: cover;
@@ -12,9 +22,16 @@
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   cursor: pointer;
 }
-#viewers > img:hover {
+#viewers > div img:hover {
   border-color: rgba(249, 249, 249, 0.8);
   transform: scale(1.05);
   box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
     rgb(0 0 0 / 72%) 0px 30px 22px -10px;
 }
+video {
+  display: none;
+}
+/* .test {
+  width: 174px;
+  height: 100px;
+} */
