@@ -7,33 +7,48 @@
   padding-top: 9px;
   padding-bottom: 15px;
 }
-#firstChild {
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#firstChild > span {
-  display: flex;
-}
+
 #header-logo {
   width: 100px;
   object-fit: cover;
 }
 
-#header #profile > div {
+#headerLinkAndProfile {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
-#header #profile img {
+#headerLinksContainer {
+  display: flex;
+  max-width: 924px;
+  width: 83%;
+  justify-content: space-between;
+}
+#userImage {
   height: 50px;
   border-radius: 50px;
   margin-left: 10px;
   object-fit: cover;
   margin-right: 15px;
 }
-#profile button {
+.navbar-nav {
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+#userImgAndLogoutBtn {
+  display: flex;
+  align-items: center;
+}
+#userImgAndLogoutBtn small {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: white;
+}
+#userImgAndLogoutBtn span {
+  display: flex;
+  flex-direction: column;
+}
+.signInAndOutBtn {
   border: 1px solid #f9f9f9;
   padding: 8px 16px;
   border-radius: 4px;
@@ -43,20 +58,20 @@
   transition: all 0.2s ease 0s;
   color: white;
 }
-
-#profile button:hover {
+.signInAndOutBtn:hover {
   background-color: #f9f9f9;
   color: black;
   border-color: transparent;
 }
-#profile span {
-  display: flex;
-  flex-direction: column;
-}
-#profile small {
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.navbar-toggler-icon {
-  color: white;
+
+@media (max-width: 768px) {
+  #headerLinkAndProfile,
+  #headerLinksContainer {
+    flex-direction: column;
+  }
+  #headerLinksContainer {
+    height: 250px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
 }

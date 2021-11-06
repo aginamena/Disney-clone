@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Header.css";
 import HeaderLinks from './HeaderLinks';
 import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from "../features/user/userSlice";
@@ -13,6 +13,17 @@ function Header() {
     const userPhoto = useSelector(selectUserPhoto);
     const dispatch = useDispatch()
     const history = useHistory();
+    const [toggler, setToggler] = useState("block");
+
+    function toggleNavbar() {
+        if (toggler == "block") {
+            document.querySelector("#navbarNavAltMarkup").style = "display:block";
+            setToggler("none");
+        } else {
+            document.querySelector("#navbarNavAltMarkup").style = "display:none";
+            setToggler("block");
+        }
+    }
 
     useEffect(() => {
         auth.onAuthStateChanged(async (user) => {
@@ -54,21 +65,20 @@ function Header() {
     }
 
     return (
-        <nav id="header" className="container-fluid navbar navbar-expand-lg">
+
+        <nav className="container-fluid navbar navbar-expand-lg" id="header">
             <img src="./images/logo.svg" alt="desney logo" id="header-logo" className="navbar-brand" />
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 {/* <span className="navbar-toggler-icon"></span> */}
-                <i className="fas fa-bars navbar-toggler-icon"></i>
+                <i className="fas fa-bars navbar-toggler-icon" style={{ color: "white" }} onClick={toggleNavbar} />
             </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-
-            <div className="collapse navbar-collapse" id="navbarNav">
-                {
-                    // if the username isn't null, we want to share these links
-                    userName ? (
-                        <>
-                            <ul className="navbar-nav">
-                                <div>
+                <div className="navbar-nav">
+                    {
+                        userName ? (
+                            <div id="headerLinkAndProfile">
+                                <div id="headerLinksContainer">
                                     <HeaderLinks src="./images/home-icon.svg" name="home" />
                                     <HeaderLinks src="./images/search-icon.svg" name="search" />
                                     <HeaderLinks src="./images/watchlist-icon.svg" name="watchlist" />
@@ -76,23 +86,25 @@ function Header() {
                                     <HeaderLinks src="./images/movie-icon.svg" name="movies" />
                                     <HeaderLinks src="./images/series-icon.svg" name="series" />
                                 </div>
-                                <div>
-                                    <img src={userPhoto} alt="user profile" />
+
+                                {/* second part */}
+
+                                <div id="userImgAndLogoutBtn">
+                                    <img src={userPhoto} alt="user profile" id="userImage" />
                                     <span>
                                         <small>{userName}</small>
 
-                                        <button onClick={signOut}>Log Out</button>
+                                        <button onClick={signOut} className="signInAndOutBtn">Log Out</button>
                                     </span>
                                 </div>
-                            </ul>
+                            </div>
+                        ) : <button onClick={signIn} className="signInAndOutBtn">Login</button>
+                    }
 
-                        </>
-                    )
-                        : <button onClick={signIn}>Login</button>
-                }
-
+                </div>
             </div>
         </nav>
+
     )
 }
 
