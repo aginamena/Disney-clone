@@ -39,3 +39,10 @@
   line-height: 1.5;
   margin: 12px auto;
 }
+
+@media (max-width: 540px) {
+  #login button,
+  #login img {
+    width: 90%;
+  }
+}

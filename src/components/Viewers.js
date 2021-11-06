@@ -31,22 +31,22 @@ function Viewers() {
             <div onMouseOver={playVideo} onMouseOut={stopVideo} className="test">
 
                 <img src="./images/viewers-pixar.png" alt="pixar" id="video1" />
-                <video src="./videos/1564676714-pixar.mp4" width="200" height="100" controls loop />
+                <video src="./videos/1564676714-pixar.mp4" controls loop />
             </div>
             <div onMouseOver={playVideo} onMouseOut={stopVideo} className="test">
 
                 <img src="./images/viewers-marvel.png" alt="marvel" id="video1" />
-                <video src="./videos/1564676115-marvel.mp4" width="200" height="100" controls loop />
+                <video src="./videos/1564676115-marvel.mp4" controls loop />
             </div>
             <div onMouseOver={playVideo} onMouseOut={stopVideo} className="test">
 
                 <img src="./images/viewers-starwars.png" alt="starwars" id="video1" />
-                <video src="./videos/1608229455-star-wars.mp4" width="200" height="100" controls loop />
+                <video src="./videos/1608229455-star-wars.mp4" controls loop />
             </div>
             <div onMouseOver={playVideo} onMouseOut={stopVideo} className="test">
 
                 <img src="./images/viewers-national.png" alt="national" id="video1" />
-                <video src="./videos/1564676296-national-geographic.mp4" width="200" height="100" controls loop />
+                <video src="./videos/1564676296-national-geographic.mp4" controls loop />
             </div>
         </div>
 

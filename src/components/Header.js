@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import "./Header.css";
 import HeaderLinks from './HeaderLinks';
 import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from "../features/user/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { connectAdvanced, useDispatch, useSelector } from "react-redux";
 import { auth, provider } from "../firebase";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup, signInWithRedirect, getRedirectResult } from "firebase/auth";
 import { useHistory } from "react-router-dom"
 
 
@@ -24,7 +24,7 @@ function Header() {
                     email: user.email,
                     photo: user.photoURL
                 }))
-                // go the home page
+                //whenever the user logins we go to home page
                 history.push("/home");
             }
         })
@@ -32,20 +32,15 @@ function Header() {
 
     const signIn = () => {
         //we've to also enable signing into google from firebase for this to work correctly
-        signInWithPopup(auth, provider)
-            .then(result => {
-                let user = result.user;
-                dispatch(setUserLogin({
-                    name: user.displayName,
-                    email: user.email,
-                    photo: user.photoURL
-                }))
-                // go the home page
-                history.push("/home");
-            })
-            .catch((err) => {
-                alert("AN ERROR OCCURED!")
-            })
+
+        if (window.innerWidth <= 540) {
+            //sing in from mobile device
+            signInWithRedirect(auth, provider);
+
+        } else {
+            //signing in from the tablet and above device
+            signInWithPopup(auth, provider);
+        }
     }
     const signOut = () => {
         auth.signOut()
@@ -55,7 +50,7 @@ function Header() {
                 //go to log out page
                 history.push("/");
             })
-            .catch(() => alert("ERROR SIGNING OUT!"))
+            .catch(() => alert("YOU HAVEN'T SIGNED OUT!"))
     }
 
     return (

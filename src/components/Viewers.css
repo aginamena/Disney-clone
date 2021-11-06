@@ -30,8 +30,5 @@
 }
 video {
   display: none;
+  width: 100%;
 }
-/* .test {
-  width: 174px;
-  height: 100px;
-} */

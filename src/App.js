@@ -17,12 +17,13 @@ function App() {
       <div className="App" style={{ backgroundImage: "url(./images/home-background.png)" }}>
         <Header />
         <Switch>
-          <Route exact path="/home">
-            <Home />
-          </Route>
           <Route exact path="/">
             <Login />
           </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+
           <Route exact path="/detail/:identifier">
             <Detail
             />

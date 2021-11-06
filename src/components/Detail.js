@@ -36,15 +36,15 @@ function Detail(props) {
                             <h1 className="imageTitle">{movie.titleImg}</h1>
                             <div id="btn-playList">
                                 <button id="play-btn">
-                                    <i class="fas fa-play" />
+                                    <i className="fas fa-play" />
                                     <small>Play</small>
                                 </button>
                                 <button id="play-btn2">
-                                    <i class="fas fa-play" />
+                                    <i className="fas fa-play" />
                                     <small>Trailer</small>
                                 </button>
-                                <i class="fas fa-plus"></i>
-                                <i class="fas fa-users"></i>
+                                <i className="fas fa-plus"></i>
+                                <i className="fas fa-users"></i>
                             </div>
                             <p className="producers">By {movie.producers}</p>
                         </>
