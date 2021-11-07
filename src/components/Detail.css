@@ -69,3 +69,23 @@
   margin-right: 0;
   background-color: black;
 }
+
+@media (max-width: 414px) {
+  #btn-playList {
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-between;
+  }
+  #play-btn,
+  #play-btn2,
+  .fa-plus,
+  .fa-users {
+    width: 100%;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+  #detail .imageTitle,
+  .producers {
+    text-align: center;
+  }
+}
