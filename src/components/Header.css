@@ -16,12 +16,13 @@
 #headerLinkAndProfile {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 #headerLinksContainer {
   display: flex;
   max-width: 924px;
-  width: 83%;
+  width: 63%;
   justify-content: space-between;
 }
 #userImage {
@@ -33,7 +34,8 @@
 }
 .navbar-nav {
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  width: 100%;
 }
 #userImgAndLogoutBtn {
   display: flex;
@@ -57,6 +59,8 @@
   background-color: rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease 0s;
   color: white;
+  /* position:absolute;
+  right:0; */
 }
 .signInAndOutBtn:hover {
   background-color: #f9f9f9;

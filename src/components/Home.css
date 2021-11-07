@@ -4,3 +4,21 @@
 .home_viewers {
   margin: 100px auto;
 }
+
+@media (max-width: 1024px) {
+  .home {
+    /* the browser calculates the heights for us */
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .home_viewers {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .home {
+    text-align: center;
+  }
+}

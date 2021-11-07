@@ -6,14 +6,16 @@ function Movies(props) {
     return (
         <div id="movies" className="container">
             <h4>{props.heading}</h4>
-            <div>
+            <div className="movieList-container">
                 {
                     props.movies.map((movie) => (
                         movie &&
-                        <Link to={"/detail/" + movie.id}>
-                            {/* if there is a move, we diplay the card image */}
-                            {<img src={movie.cardImg} key={movie.id} id={movie.id} />}
-                        </Link>
+                        <div className="movie-container">
+                            <Link to={"/detail/" + movie.id}>
+                                {/* if there is a move, we diplay the card image */}
+                                {<img src={movie.cardImg} key={movie.id} id={movie.id} />}
+                            </Link>
+                        </div>
                     ))
                 }
             </div>

@@ -63,7 +63,13 @@ function Header() {
             })
             .catch(() => alert("YOU HAVEN'T SIGNED OUT!"))
     }
-
+    // let currentPath = window.location.pathname;
+    // if (currentPath == "/") {
+    //     if (document.querySelector(".navbar-toggler") != null) {
+    //         document.querySelector(".navbar-toggler").style = "display:none";
+    //     }
+    //     // document.querySelector("#navbarNavAltMarkup").style = "position:absolute,right:0";
+    // }
     return (
 
         <nav className="container-fluid navbar navbar-expand-lg" id="header">
