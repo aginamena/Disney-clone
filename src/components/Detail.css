@@ -75,17 +75,15 @@
     flex-direction: column;
     height: 250px;
     justify-content: space-between;
+    align-items: flex-start;
   }
-  #play-btn,
-  #play-btn2,
-  .fa-plus,
-  .fa-users {
-    width: 100%;
-    margin-right: 0 !important;
-    text-align: center;
-  }
+
   #detail .imageTitle,
   .producers {
-    text-align: center;
+    text-align: left;
+  }
+  .imageTitle {
+    width: 100%;
+    font-size: 40px !important;
   }
 }

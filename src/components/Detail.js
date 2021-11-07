@@ -7,6 +7,9 @@ import { doc, getDoc } from "firebase/firestore";
 function Detail(props) {
     const { identifier } = useParams();
     const [movie, setMovie] = useState();
+    const [backgroundWidth, setBackgroundWidth] = useState(window.innerWidth);
+
+    window.addEventListener('resize', () => setBackgroundWidth(window.innerWidth));
 
     async function getMovie() {
         const docRef = doc(db, "disneyMovies", identifier);
@@ -27,7 +30,9 @@ function Detail(props) {
     return (
 
 
-        <div id="detail" style={movie ? { backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + movie.backgroundImg + ")" } : {}}>
+        <div id="detail" style={movie && (
+            backgroundWidth > 1024 ? { backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + movie.backgroundImg + ")" }
+                : { backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" + movie.mobileBackgroundImg + ")" })}>
             <div className="container">
 
                 {
