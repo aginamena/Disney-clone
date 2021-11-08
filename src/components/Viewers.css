@@ -2,10 +2,7 @@
   display: flex;
   justify-content: space-between;
 }
-/* #video1 {
-  height: 100px;
-  width: 100px;
-} */
+
 #viewers div {
   width: 174px;
   height: 100px;
@@ -39,14 +36,4 @@ video {
     align-items: center;
     height: 600px;
   }
-  /* #viewers div {
-    width: 90%;
-    height: 300px;
-  }
-  #viewers > div img,
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
 }

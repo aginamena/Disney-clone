@@ -6,7 +6,7 @@ import { connectAdvanced, useDispatch, useSelector } from "react-redux";
 import { auth, provider } from "../firebase";
 import { signInWithPopup, signInWithRedirect, getRedirectResult } from "firebase/auth";
 import { useHistory } from "react-router-dom"
-
+import { Link } from "react-router-dom"
 
 function Header() {
     const userName = useSelector(selectUserName);
@@ -17,10 +17,12 @@ function Header() {
 
     function toggleNavbar() {
         if (toggler == "block") {
-            document.querySelector("#navbarNavAltMarkup").style = "display:block";
+            // document.querySelector("#navbarNavAltMarkup").style = "display:block";
+            document.querySelector("#navbarNavAltMarkup").style = "height:auto; display:block; opacity:1; transition: all 1s ease-in";
             setToggler("none");
         } else {
-            document.querySelector("#navbarNavAltMarkup").style = "display:none";
+            // document.querySelector("#navbarNavAltMarkup").style = "display:none";
+            document.querySelector("#navbarNavAltMarkup").style = "height:0; display:block; opacity:0; transition: all 1s ease-out";
             setToggler("block");
         }
     }
@@ -63,13 +65,6 @@ function Header() {
             })
             .catch(() => alert("YOU HAVEN'T SIGNED OUT!"))
     }
-    // let currentPath = window.location.pathname;
-    // if (currentPath == "/") {
-    //     if (document.querySelector(".navbar-toggler") != null) {
-    //         document.querySelector(".navbar-toggler").style = "display:none";
-    //     }
-    //     // document.querySelector("#navbarNavAltMarkup").style = "position:absolute,right:0";
-    // }
     return (
 
         <nav className="container-fluid navbar navbar-expand-lg" id="header">

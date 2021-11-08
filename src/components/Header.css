@@ -24,6 +24,7 @@
   max-width: 924px;
   width: 63%;
   justify-content: space-between;
+  align-items: center;
 }
 #userImage {
   height: 50px;

@@ -40,15 +40,6 @@
   margin: 12px auto;
 }
 
-/* .navbar-toggler {
-  display: none;
-}
-#navbarNavAltMarkup {
-  display: block;
-  position: absolute;
-  right: 0;
-} */
-
 @media (max-width: 540px) {
   #login button,
   #login img {

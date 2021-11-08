@@ -3,10 +3,12 @@ import "./HeaderLinks.css";
 
 function HeaderLinks(props) {
     return (
-        <span id="headerLinks">
-            <img src={props.src} alt="header link" />
-            <a >{props.name}</a>
-        </span>
+        <a href="https://www.disney.com/">
+            <span id="headerLinks">
+                <img src={props.src} alt="header link" />
+                <a >{props.name}</a>
+            </span>
+        </a>
     )
 }
 

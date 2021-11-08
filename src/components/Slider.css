@@ -2,12 +2,6 @@
   height: 350px;
 }
 
-/* @media (max-width: 768px) {
-  .carousel {
-    height: 180px;
-  }
-} */
-
 @media (max-width: 540px) {
   .carousel {
     height: 180px;
